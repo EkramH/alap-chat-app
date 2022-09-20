@@ -117,3 +117,20 @@
     height: 24px;
 }
 
+/* =============== Message =============== */
+.message {
+    height: calc(100% - 140px);
+    background-color: #e2e2fc;
+    padding: 10px;
+}
+
+/* =============== Messages =============== */
+
+
+
+/* =============== Input =============== */
+.input {
+    background-color: #fff;
+    height: 70px;
+    padding: 10px;
+}
