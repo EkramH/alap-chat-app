@@ -1,12 +1,15 @@
 import React from "react";
 import "./components.css";
 import Navbar from "./Navbar";
+import Search from "./Search";
+import Chats from "./Chats";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <Navbar />
-      <h4>sidebar</h4>
+      <Search />
+      <Chats />
     </div>
   );
 };

@@ -43,3 +43,60 @@
     border: none;
     cursor: pointer;
 }
+
+
+/* =============== Search =============== */
+.search {
+    border-bottom: 1px solid gray;
+}
+
+.search__form {
+    padding: 10px;
+}
+
+.search__form input {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+::placeholder {
+    color: #d3d3d3;
+}
+
+.user__chat {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user__chat:hover {
+    background-color: #3d3f6e;
+}
+
+.user__chat img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user__info span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user__info p {
+    font-size: 14px;
+    color: #d3d3d3;
+}
+
+
+/* =============== Chat =============== */
+
+
