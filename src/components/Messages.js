@@ -1,10 +1,21 @@
 import React from "react";
 import "./components.css";
+import Message from "./Message";
 
 const Messages = () => {
   return (
     <div className="messages">
-      <h6>Messages</h6>
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
+      <Message />
     </div>
   );
 };

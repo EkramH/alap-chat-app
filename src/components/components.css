@@ -119,13 +119,73 @@
 
 /* =============== Message =============== */
 .message {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.message__info {
+    display: flex;
+    flex-direction: column;
+    color: #808080;
+    font-weight: 300;
+}
+
+.message__info  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message__content {
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message__content p {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 10px;
+    max-width: max-content;
+}
+
+.message__content img {
+    width: 300%;
+}
+
+/* owner-message */
+.owner-message {
+    flex-direction: row-reverse;
+}
+
+.owner-message p {
+    background-color: #8da4f1;
+    color: #fff;
+    border-radius: 10px 0px 10px 10px;
+}
+
+.message__content {
+    align-items: flex-end;
+}
+
+.message__content p {
+    background-color: #8da4f1;
+    color: #fff;
+    border-radius: 10px 0px 10px 10px;
+}
+
+
+
+/* =============== Messages =============== */
+.messages {
     height: calc(100% - 140px);
     background-color: #e2e2fc;
     padding: 10px;
+    overflow-y: scroll;
 }
-
-/* =============== Messages =============== */
-
 
 
 /* =============== Input =============== */
