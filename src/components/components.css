@@ -1,0 +1,45 @@
+.sidebar {
+    flex: 1;
+    background-color: #5b5d8d;
+}
+
+.chat {
+    flex: 2;
+}
+
+/* =============== Navbar =============== */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #373a75;
+    height: 70px;
+    padding: 10px;
+    justify-content: space-between;
+    color: #f1f1f1;
+}
+
+.navbar__logo {
+    font-weight: bold;
+}
+
+.navbar__user {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar__img {
+    background-color: #ddddf7;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar__btn {
+    background-color: #5b5d8d;
+    color: #ddddf7;
+    font-size: 14px;
+    padding: 0 4px;
+    border: none;
+    cursor: pointer;
+}
