@@ -133,4 +133,34 @@
     background-color: #fff;
     height: 70px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input__text {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #3d3f6e;
+    font-size: 18px;
+}
+
+.input__send {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input__send img {
+    height: 24px;
+    cursor: pointer;
+}
+
+.input__btn {
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #8da4f1;
+    border-radius: 4px;
 }
