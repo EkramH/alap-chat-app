@@ -1,52 +1,39 @@
-import React from "react";
+import { doc, onSnapshot } from "firebase/firestore";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { db } from "../firebase.init";
 import "./components.css";
 
 const Chats = () => {
+  const [chats, setChats] = useState([]);
+  const { currentUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    const getChats = () => {
+      const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
+        setChats(doc.data());
+      });
+
+      return () => {
+        unsub();
+      };
+    };
+    currentUser.uid && getChats();
+  }, [currentUser.uid]);
+
+  console.log(chats);
+
   return (
     <div className="chats">
-      <div className="user__chat">
-        <img
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt=""
-        />
-        <div className="user__info">
-          <span>Ali</span>
-          <p>Hello</p>
+      {Object.entries(chats)?.map((chat) => (
+        <div className="user__chat" key={chat[0]}>
+          <img src={chat[1].userInfo.photoURL} alt="" />
+          <div className="user__info">
+            <span>{chat[1].userInfo.displayName}</span>
+            <p>{chat[1].lastMessage?.text}</p>
+          </div>
         </div>
-      </div>
-
-      <div className="user__chat">
-        <img
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt=""
-        />
-        <div className="user__info">
-          <span>Ali</span>
-          <p>Hello</p>
-        </div>
-      </div>
-
-      <div className="user__chat">
-        <img
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt=""
-        />
-        <div className="user__info">
-          <span>Ali</span>
-          <p>Hello</p>
-        </div>
-      </div>
-
-      <div className="user__chat">
-        <img
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-          alt=""
-        />
-        <div className="user__info">
-          <span>Ali</span>
-          <p>Hello</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
