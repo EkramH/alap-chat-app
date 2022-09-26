@@ -1,13 +1,15 @@
 # Alap Chat App
 
-## [Alap Chat](https://alap-chat-5e69a.web.app/)
+## [Alap Chat Live Link](https://alap-chat-5e69a.web.app/)
 
 ## Details
 
 It's a Chat App with ReactJS and Firebase.
 
-- User can send and received real time chat message.
+- Users can send and receive a real-time chat message.
 
-- User Can send Text and Img.
+- User Can send Text and Images.
 
-- Everything done by `react` and `firebase`.
+- Everything is done by `react` and `firebase`.
+
+Social login and other services will be added.
